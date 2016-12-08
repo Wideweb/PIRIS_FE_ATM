@@ -1,0 +1,28 @@
+<html>
+<head>
+    <base href="/">
+    <title>Piris</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="atm-body">
+    <div ng-app="app">
+        <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+        <div class="atm-left-side-border">
+            <img class="brand" src='./content/logo.png'/>
+            <atm-output></atm-output>
+        </div>
+        <div class="atm-display-wrapper">
+            <div class="panel panel-default atm-display">
+                <div class="panel-body">
+                    <div class="atm-menu" ui-view></div>
+                </div>
+            </div>
+        </div>
+        <div class="atm-right-side-border">
+            <img class="card-types" src='./content/card_types.png'/>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>

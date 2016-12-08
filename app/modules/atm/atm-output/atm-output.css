@@ -1,0 +1,21 @@
+.atm-gap .gap {
+    height: 13px;
+    background-color: black;
+    border-radius: 8px;
+    width: 160px;
+    box-shadow: inset 0px 3px 3px #bdbbbd, inset 0px -4px 3px #bdbbbd;
+}
+
+.atm-gap .output{
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.atm-gap .output:hover { 
+    -moz-box-shadow: 0 0 10px #00c; 
+    -webkit-box-shadow: 0 0 10px #00c; 
+    box-shadow: 0 0 10px #00c; 
+}

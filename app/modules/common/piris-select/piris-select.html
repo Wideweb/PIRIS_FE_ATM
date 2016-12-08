@@ -1,0 +1,8 @@
+<select class="form-control"
+        name="{{ $ctrl.name }}"
+        id="{{ $ctrl.id }}"
+        ng-model="$ctrl.ngModel"
+        ng-required="$ctrl.required"
+        ng-disabled="$ctrl.disabled()"
+        ng-options="opt.id as opt.text for opt in $ctrl.options">
+</select>

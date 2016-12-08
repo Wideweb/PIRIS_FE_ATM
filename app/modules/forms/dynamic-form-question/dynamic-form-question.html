@@ -1,0 +1,45 @@
+<ng-form name="form">
+    <div class="form-group">
+        <label for="{{ $ctrl.question.key }}">{{ $ctrl.question.label }}</label>
+            <div ng-switch="$ctrl.question.controlType">
+                
+                <input ng-switch-when="1"
+                        class="form-control" 
+                        name="{{ $ctrl.question.key }}"
+                        id="{{ $ctrl.question.key }}"
+                        ng-model="$ctrl.ngModel"
+                        ng-required="$ctrl.question.required"
+                        ng-pattern="$ctrl.question.pattern"
+                        ng-disabled="$ctrl.disabled">
+
+                <piris-select ng-switch-when="2"
+                        name="{{ $ctrl.question.key }}"
+                        url="{{ $ctrl.question.optionsUrl }}"
+                        id="{{ $ctrl.question.key }}"
+                        ng-model="$ctrl.ngModel"
+                        required="$ctrl.question.required"
+                        disabled="$ctrl.disabled">
+                </piris-select>
+
+                <input ng-switch-when="3"
+                        class="form-check-input" 
+                        type="checkbox"
+                        name="{{ $ctrl.question.key }}"
+                        id="{{ $ctrl.question.key }}"
+                        ng-model="$ctrl.ngModel"
+                        ng-disabled="$ctrl.disabled">
+
+                <input ng-switch-when="4"
+                        class="form-control" 
+                        type="date"
+                        date-input
+                        name="{{ $ctrl.question.key }}"
+                        id="{{ $ctrl.question.key }}"
+                        ng-model="$ctrl.ngModel"
+                        ng-disabled="$ctrl.disabled">
+
+            </div> 
+        <div class="error-message" ng-if="form[$ctrl.question.key].$error.required">{{ $ctrl.question.label }} is required</div>
+        <div class="error-message" ng-if="form[$ctrl.question.key].$error.pattern">wrong format</div>
+    </div> 
+</ng-form>

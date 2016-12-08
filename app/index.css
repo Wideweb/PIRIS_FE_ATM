@@ -1,0 +1,103 @@
+.atm-body{
+    background-color: #bdbbbd;
+    min-width: 800px;
+}
+
+.atm-left-side-border {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    bottom: 50px;
+}
+
+.atm-left-side-border atm-output {
+    position: absolute;
+    top: 250px;
+}
+
+.atm-right-side-border {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 160px;
+    bottom: 50px;
+}
+
+.atm-left-side-border .brand{
+    width: 160px;
+    position: absolute;
+    top: 70px;
+}
+
+.atm-right-side-border .card-types {
+    width: 160px;
+    position: absolute;
+    top: 70px;
+}
+
+.atm-body .atm-display-wrapper {
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    top: 50px;
+    bottom: 50px;
+    min-height: 550px;
+    min-width: 400px;
+}
+
+.atm-body .atm-display-wrapper .atm-display {
+    background-color: #8a89ab;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: inset 0px 6px 10px #595859;
+    position: relative;
+}
+
+.atm-body .atm-display .atm-menu{ 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 50px;
+    width: 100%;
+    padding-right: 100px;
+}
+
+.atm-body .atm-display .atm-menu .page-header{
+    border: none;
+    color: #ebe159;
+    text-align: center;
+}
+
+.atm-body .atm-display .atm-menu .page-header.page-header-error{
+    color: #eb5959;
+    color: #940c0c;
+    font-weight: bold;
+}
+
+.btn.btn-primary {
+    border: solid 1px #959aa1;
+    background: rgba(230,237,245,1);
+    background: -moz-linear-gradient(top, rgba(230,237,245,1) 0%, rgba(255,255,255,1) 38%, rgba(184,208,224,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,237,245,1)), color-stop(38%, rgba(255,255,255,1)), color-stop(100%, rgba(184,208,224,1)));
+    background: -webkit-linear-gradient(top, rgba(230,237,245,1) 0%, rgba(255,255,255,1) 38%, rgba(184,208,224,1) 100%);
+    background: -o-linear-gradient(top, rgba(230,237,245,1) 0%, rgba(255,255,255,1) 38%, rgba(184,208,224,1) 100%);
+    background: -ms-linear-gradient(top, rgba(230,237,245,1) 0%, rgba(255,255,255,1) 38%, rgba(184,208,224,1) 100%);
+    background: linear-gradient(to bottom, rgba(230,237,245,1) 0%, rgba(255,255,255,1) 38%, rgba(184,208,224,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6edf5', endColorstr='#b8d0e0', GradientType=0 );
+    border-radius: 0px;
+    font-weight: bold;
+    min-width: 100%;
+}
+
+.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus{
+    color: black;
+}
+
+input.form-control {
+    border-radius: 0px;
+    font-size: 20px;
+}

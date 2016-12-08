@@ -1,0 +1,21 @@
+<div class="home">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 ng-if="!$ctrl.isLoading" class="page-header">Выберите действие</h1>
+            <h1 ng-if="$ctrl.isLoading" class="page-header">Выполняется запрос баланса...</h1>
+        </div>
+    </div>
+    <div ng-if="!$ctrl.isLoading" class="row">
+        <ul class="home-menu list-unstyled">
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.showOnTheScreen()" class="btn btn-primary">На экран</button>
+            </li>
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.printOnTheCheck()" class="btn btn-primary">Распечатать</button>
+            </li>
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.back()" class="btn btn-primary">Назад</button>
+            </li>
+        </ul>
+    </div>
+</div>

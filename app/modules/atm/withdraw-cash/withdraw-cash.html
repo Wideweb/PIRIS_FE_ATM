@@ -1,0 +1,43 @@
+<div class="withdraw-cash">
+    <div ng-if="!$ctrl.hasErrors()" class="row">
+        <h1 ng-if="!$ctrl.isLoading" class="page-header">Введите, пожалуйста, сумму</h1>
+        <h1 ng-if="$ctrl.isLoading" class="page-header">Обработка запроса на сервере...</h1>
+    </div>
+    <div ng-if="$ctrl.hasErrors()" class="row">
+        <h1 class="page-header page-header-error" ng-repeat="error in $ctrl.errors">
+            {{ error }}
+        </h1>
+    </div>
+    <div class="row">
+        <form name="form" novalidate ng-class="form.$submitted ? 'submitted' : 'not-submitted'">
+            <div class="form-row">
+                <div class="form-group col-sm-offset-1 col-sm-7">
+                    <input
+                        class="form-control" 
+                        name="amount"
+                        id="amount"
+                        ng-model="$ctrl.amount"
+                        ng-disabled="$ctrl.isLoading"
+                        ng-required="true"
+                        ng-pattern="/^\d+(\.\d+)?$/">
+                    <div class="error-message" ng-if="form.amount.$error.required">Amount is required</div>
+                    <div class="error-message" ng-if="form.amount.$error.pattern">Wrong format</div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                            <button ng-disabled="$ctrl.isLoading" ng-click="$ctrl.onTryWithdrawCash(form)" class="btn btn-primary">^</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div ng-if="!$ctrl.isLoading" class="row">
+        <ul class="menu list-unstyled">
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.home()" class="btn btn-primary">Назад</button>
+            </li>
+        </ul>
+    </div>
+</div>

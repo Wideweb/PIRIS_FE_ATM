@@ -1,0 +1,9 @@
+.withdraw-cash .menu .btn.btn-primary {
+    height: 50px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.withdraw-cash .menu{
+    margin-top: 50px;
+}

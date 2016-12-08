@@ -1,0 +1,10 @@
+.balance .balance-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.balance .menu .btn.btn-primary {
+    height: 50px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}

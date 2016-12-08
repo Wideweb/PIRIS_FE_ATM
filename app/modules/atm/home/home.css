@@ -1,0 +1,9 @@
+.home .home-menu {
+    margin: 0 auto;
+}
+
+.home .home-menu .btn.btn-primary {
+    height: 50px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}

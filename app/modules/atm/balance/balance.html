@@ -1,0 +1,21 @@
+<div class="balance">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 ng-if="!$ctrl.isLoading" class="page-header">Баланс</h1>
+            <h1 ng-if="$ctrl.isLoading" class="page-header">Выполняется запрос баланса...</h1>
+        </div>
+    </div>
+    <div ng-if="!$ctrl.isLoading" class="row">
+        <h2 class="balance-info">{{ $ctrl.balance }}<h2>                   
+    </div>
+    <div ng-if="!$ctrl.isLoading" class="row">
+        <ul class="menu list-unstyled">
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.home()" class="btn btn-primary">Другая операция</button>
+            </li>
+            <li class="col-sm-12">
+                <button ng-click="$ctrl.logout()" class="btn btn-primary">Забрать карту</button>
+            </li>
+        </ul>
+    </div>
+</div>
