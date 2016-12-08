@@ -3,11 +3,11 @@ export default ngModule => {
         $rootScope.$on('$stateChangeStart', (event, toState, toStateParams, fromState, fromStateParams) => {
             toState.controllerAs = '$ctrl';
 
-            if(!toState.data || !toState.data.authenticate){
+            if (!toState.data || !toState.data.authenticate) {
                 return;
             }
 
-            if(!authService.isAuthenticated()){
+            if (!authService.isAuthenticated()) {
                 event.preventDefault();
                 $state.go('login');
             }

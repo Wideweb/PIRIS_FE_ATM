@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 class ATMOutputController {
-    
+
     constructor($scope, $timeout) {
         this.output = null;
         this.displayTime = 3000;
@@ -26,8 +26,8 @@ class ATMOutputController {
         this.output = null;
     }
 
-    cancelTimer(){
-        if(this.currentTimer){
+    cancelTimer() {
+        if (this.currentTimer) {
             this.$timeout.cancel(this.currentTimer);
         }
     }
